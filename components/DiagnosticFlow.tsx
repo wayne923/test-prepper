@@ -19,7 +19,7 @@ export default function DiagnosticFlow() {
   const router = useRouter()
   const [questions, setQuestions] = useState<Question[]>([])
   const [currentStep, setCurrentStep] = useState(0)
-  const [answers, setAnswers] = useState<Record<string, number>>({})
+  const [answers, setAnswers] = useState<Record<string, { selectedIdx: number; msTaken: number }>>({})
   const [selectedChoice, setSelectedChoice] = useState<string>('')
   const [startTime, setStartTime] = useState<number>(Date.now())
 
